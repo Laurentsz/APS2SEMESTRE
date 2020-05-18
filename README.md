@@ -1,2 +1,2 @@
 # APS2SEMESTRE
-Jogo em Java
+Jogo totalmente desenvolvido em java através do JFrame e Graphics 2d.

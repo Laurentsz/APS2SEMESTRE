@@ -28,8 +28,10 @@ import javax.swing.Timer;
 public class Fase extends JPanel implements ActionListener {
 	
 	private Image fundoo;
+	private Image fimDeJogo;
 	private Player player;
 	private Timer timer;
+	private Timer timer2;
 	private List<Lixo1> lixo1;
 	private List<Lixo2> lixo2;
 	private List<Lixo3> lixo3;
@@ -37,6 +39,7 @@ public class Fase extends JPanel implements ActionListener {
 	private List<Obstaculo1> obstaculo1;
 	private List<Obstaculo2> obstaculo2;
 	private List<Fundo> fundo;
+	int segundos = 0;
 	int pontuacao = 0;
 	String highScore = "";
 	private boolean emJogo;
@@ -60,7 +63,23 @@ public class Fase extends JPanel implements ActionListener {
 
 		timer = new Timer(5, this);
 		timer.start();
-
+		
+		
+		timer2 = new Timer (1000, new ActionListener() {
+			public void actionPerformed(ActionEvent qq) {
+				if (segundos <= 31) {
+					segundos++;
+				}
+				
+				if (segundos == 6) {
+					ImageIcon jogoAcabou = new ImageIcon("res\\fimdejogo.png");
+					fimDeJogo = jogoAcabou.getImage();
+					emJogo = false;
+				}
+			}
+		});
+		timer2.start();
+		
 		inicializalixos();
 		emJogo = true;
 		inicializalixos2();
@@ -73,12 +92,12 @@ public class Fase extends JPanel implements ActionListener {
 		emJogo = true;
 		inicializaobstaculo2();
 		emJogo = true;
+		
 
 	}
 
+
 	// Aqui é onde indicamos a quantidade e posição dos objetos.
-
-
 	public void inicializalixos() {
 		int coordenadas[] = new int[50];
 		lixo1 = new ArrayList<Lixo1>();
@@ -178,6 +197,7 @@ public class Fase extends JPanel implements ActionListener {
 			fundo.add(new Fundo(4092, y));
 		}
 	}
+	
 	
 	public void checkPontuacao() {
 		if (pontuacao > Integer.parseInt((highScore.split(": ")[1]))) {
@@ -287,12 +307,13 @@ public class Fase extends JPanel implements ActionListener {
 
 				graficos.setFont(graficos.getFont().deriveFont(20.0f));
 				graficos.setColor(Color.white);
+				graficos.drawString("TIMER = " + segundos, 600, 50);
 				graficos.drawString("PONTUAÇÃO = " + pontuacao, 800, 50);
 				graficos.drawString(highScore, 50, 50);
 
 			}
 		} else {
-			ImageIcon fimJogo = new ImageIcon("res\\gameOver.png");
+			ImageIcon fimJogo = new ImageIcon("res\\FIMB.png");
 			graficos.drawImage(fimJogo.getImage(), 0, 0, this);
 		}
 

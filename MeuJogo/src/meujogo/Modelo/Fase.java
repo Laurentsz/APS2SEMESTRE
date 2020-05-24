@@ -468,18 +468,6 @@ public class Fase extends JPanel implements ActionListener {
 		}
 	}
 	
-	public static void PlaySound(File Sound)
-	  {
-	    try{
-	      Clip clip = AudioSystem.getClip();
-	      clip.open(AudioSystem.getAudioInputStream(Sound));
-	      clip.start();
 
-	      Thread.sleep(clip.getMicrosecondLength()/1000);
-	    }catch(Exception e)
-	    {
-
-	    }
 	  }
 
-}

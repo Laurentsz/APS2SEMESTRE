@@ -43,6 +43,7 @@ public class Fase extends JPanel implements ActionListener {
 	int pontuacao = 0;
 	String highScore = "";
 	private boolean emJogo;
+	private viewer.Menu menu;
 
 	
 	public Fase() {
@@ -204,6 +205,7 @@ public class Fase extends JPanel implements ActionListener {
 			String nome = JOptionPane.showInputDialog("Novo recorde! Insira seu nome:");
 			highScore = nome + ": "+ pontuacao;
 			
+			
 			File pontuacaoFile = new File("highScore.dat");
 			
 			if (!pontuacaoFile.exists()) {
@@ -230,7 +232,7 @@ public class Fase extends JPanel implements ActionListener {
 				}
 				catch (Exception e) { }
 			}
-		}		
+		}
 
 	}	
 	
@@ -315,6 +317,7 @@ public class Fase extends JPanel implements ActionListener {
 		} else {
 			ImageIcon fimJogo = new ImageIcon("res\\FIMB.png");
 			graficos.drawImage(fimJogo.getImage(), 0, 0, this);
+			
 		}
 
 		g.dispose();

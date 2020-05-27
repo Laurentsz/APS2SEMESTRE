@@ -45,14 +45,13 @@ public class Instrucoes extends javax.swing.JFrame {
         jTextArea1.setRows(7);
         jTextArea1.setText("Comandos: WASD para movimentar\n"
         		+ "Objetivo: coletar o máximo de lixos recicláveis sem\n"
-        		+ " colidir com nenhuma caixa ou buraco\n"
+        		+ " colidir com nenhuma caixa ou buraco.\n"
         		+ "OBS: Caso atinga um recorde pessoal ao final do jogo,\n aparecerá uma"
         		+ " nova tela para que coloque seu nickname\n"
         		+ " e grave seu legado"
         		+ " na história dos video jogos.");
         jTextArea1.setBorder(null);
         jScrollPane1.setViewportView(jTextArea1);
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(

@@ -22,7 +22,7 @@ public class Lixo4 {
 	}
 
 	public void load() {
-		ImageIcon referencia = new ImageIcon("res\\lixo4.gif");
+		ImageIcon referencia = new ImageIcon("res\\lixo4.png");
 		imagem = referencia.getImage();
 
 		this.largura = imagem.getWidth(null);

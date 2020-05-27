@@ -67,11 +67,11 @@ public class Fase extends JPanel implements ActionListener {
 		
 		timer2 = new Timer (1000, new ActionListener() {
 			public void actionPerformed(ActionEvent qq) {
-				if (segundos <= 31) {
+				if (segundos <= 45) {
 					segundos++;
 				}
 				
-				if (segundos == 6) {
+				if (segundos == 46) {
 					ImageIcon jogoAcabou = new ImageIcon("res\\fimdejogo.png");
 					fimDeJogo = jogoAcabou.getImage();
 					emJogo = false;
@@ -99,11 +99,11 @@ public class Fase extends JPanel implements ActionListener {
 
 	// Aqui é onde indicamos a quantidade e posição dos objetos.
 	public void inicializalixos() {
-		int coordenadas[] = new int[50];
+		int coordenadas[] = new int[35];
 		lixo1 = new ArrayList<Lixo1>();
 
 		for (int i = 0; i < coordenadas.length; i++) {
-			int x = (int) (Math.random() * 9000 + 3000);
+			int x = (int) (Math.random() * 10000 + 4500);
 			int y = (int) (Math.random() * 405 + 405);
 			if (y > 580) {
 				y = 570;
@@ -113,11 +113,11 @@ public class Fase extends JPanel implements ActionListener {
 	}
 
 	public void inicializalixos2() {
-		int coordenadas[] = new int[50];
+		int coordenadas[] = new int[35];
 		lixo2 = new ArrayList<Lixo2>();
 
 		for (int k = 0; k < coordenadas.length; k++) {
-			int x = (int) (Math.random() * 9000 + 3000);
+			int x = (int) (Math.random() * 10000 + 4500);
 			int y = (int) (Math.random() * 405 + 405);
 			if (y > 580) {
 				y = 570;
@@ -127,11 +127,11 @@ public class Fase extends JPanel implements ActionListener {
 	}
 
 	public void inicializalixos3() {
-		int coordenadas[] = new int[50];
+		int coordenadas[] = new int[35];
 		lixo3 = new ArrayList<Lixo3>();
 
 		for (int l = 0; l < coordenadas.length; l++) {
-			int x = (int) (Math.random() * 9000 + 3000);
+			int x = (int) (Math.random() * 10000 + 4500);
 			int y = (int) (Math.random() * 405 + 405);
 			if (y > 580) {
 				y = 570;
@@ -142,11 +142,11 @@ public class Fase extends JPanel implements ActionListener {
 	}
 
 	public void inicializalixos4() {
-		int coordenadas[] = new int[50];
+		int coordenadas[] = new int[35];
 		lixo4 = new ArrayList<Lixo4>();
 
 		for (int e = 0; e < coordenadas.length; e++) {
-			int x = (int) (Math.random() * 9000 + 3000);
+			int x = (int) (Math.random() * 10000 + 4500);
 			int y = (int) (Math.random() * 405 + 405);
 			if (y > 580) {
 				y = 570;
@@ -157,12 +157,12 @@ public class Fase extends JPanel implements ActionListener {
 	}
 
 	public void inicializaobstaculo() {
-		int coordenadas[] = new int[10];
+		int coordenadas[] = new int[15];
 		obstaculo1 = new ArrayList<Obstaculo1>();
 
 		for (int e = 0; e < coordenadas.length; e++) {
-			int x = (int) (Math.random() * 9000 + 900);
-			int y = (int) (Math.random() * 300 + 405);
+			int x = (int) (Math.random() * 10000 + 4500);
+			int y = (int) (Math.random() * 400 + 405);
 			if (y > 580) {
 				y = 570;
 			}
@@ -172,12 +172,12 @@ public class Fase extends JPanel implements ActionListener {
 	}
 
 	public void inicializaobstaculo2() {
-		int coordenadas[] = new int[10];
+		int coordenadas[] = new int[15];
 		obstaculo2 = new ArrayList<Obstaculo2>();
 
 		for (int e = 0; e < coordenadas.length; e++) {
-			int x = (int) (Math.random() * 9000 + 900);
-			int y = (int) (Math.random() * 300 + 405);
+			int x = (int) (Math.random() * 10000 + 4500);
+			int y = (int) (Math.random() * 400 + 405);
 			if (y > 580) {
 				y = 570;
 			}

@@ -56,7 +56,7 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Menu Principal");
-        setExtendedState(6);
+        setExtendedState(5);
         setPreferredSize(new java.awt.Dimension(1024, 728));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -110,18 +110,18 @@ public class Menu extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
         	jPanel3Layout.createParallelGroup(Alignment.LEADING)
         		.addGroup(jPanel3Layout.createSequentialGroup()
-        			.addContainerGap()
-        			.addGroup(jPanel3Layout.createParallelGroup(Alignment.TRAILING, false)
-        				.addComponent(BotaoJogar, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        				.addComponent(BotaoSair, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 1006, Short.MAX_VALUE))
-        			.addGap(634))
+        			.addGap(265)
+        			.addGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING, false)
+        				.addComponent(BotaoJogar, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        				.addComponent(BotaoSair, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE))
+        			.addContainerGap(259, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
         	jPanel3Layout.createParallelGroup(Alignment.TRAILING)
         		.addGroup(jPanel3Layout.createSequentialGroup()
-        			.addGap(483)
+        			.addContainerGap(579, Short.MAX_VALUE)
         			.addComponent(BotaoJogar)
-        			.addPreferredGap(ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+        			.addGap(18)
         			.addComponent(BotaoSair)
         			.addGap(20))
         );

@@ -31,6 +31,12 @@ public class Obstaculo1 {
 
 	public void update() {
 		this.x -= VELOCIDADE;
+		while (this.y < 466) {
+			y = 467;
+		}
+		while (this.y > 585) {
+			y = 584;
+		}
 
 	}
 

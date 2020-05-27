@@ -31,7 +31,12 @@ public class Obstaculo2 {
 
 	public void update() {
 		this.x -= VELOCIDADE;
-
+		while (this.y < 450) {
+			y = 451;
+		}
+		while (this.y > 585) {
+			y = 584;
+		}
 	}
 
 	public Rectangle getBounds() {

@@ -31,6 +31,7 @@ public class Lixo2 {
 
 	public void update() {
 		this.x -= VELOCIDADE;
+		
 
 	}
 

@@ -42,6 +42,19 @@ public class Player implements ActionListener {
 	public void update() {
 		x += dx;
 		y += dy;
+		
+		while (this.y < 397) {
+			y = 398;
+		}
+		while (this.y > 585) {
+			y = 584;
+		}
+		while (this.x < 0) {
+			x = 1;
+		}
+		while (this.x > 968 ) {
+			x = 967;
+		}
 
 	}
 

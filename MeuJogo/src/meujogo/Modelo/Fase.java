@@ -68,13 +68,11 @@ public class Fase extends JPanel implements ActionListener {
 		
 		timer2 = new Timer (1000, new ActionListener() {
 			public void actionPerformed(ActionEvent qq) {
-				if (segundos <= 45) {
+				if (segundos <= 35) {
 					segundos++;
 				}
 				
-				if (segundos == 46) {
-					ImageIcon jogoAcabou = new ImageIcon("res\\fimdejogo.png");
-					fimDeJogo = jogoAcabou.getImage();
+				if (segundos == 36) {
 					emJogo = false;
 				}
 			}
@@ -100,88 +98,70 @@ public class Fase extends JPanel implements ActionListener {
 
 	// Aqui é onde indicamos a quantidade e posição dos objetos.
 	public void inicializalixos() {
-		int coordenadas[] = new int[35];
+		int coordenadas[] = new int[30];
 		lixo1 = new ArrayList<Lixo1>();
 
 		for (int i = 0; i < coordenadas.length; i++) {
-			int x = (int) (Math.random() * 10000 + 4500);
+			int x = (int) (Math.random() * 9000 + 3000);
 			int y = (int) (Math.random() * 405 + 405);
-			if (y > 580) {
-				y = 570;
-			}
 			lixo1.add(new Lixo1(x, y));
 		}
 	}
 
 	public void inicializalixos2() {
-		int coordenadas[] = new int[35];
+		int coordenadas[] = new int[30];
 		lixo2 = new ArrayList<Lixo2>();
 
 		for (int k = 0; k < coordenadas.length; k++) {
-			int x = (int) (Math.random() * 10000 + 4500);
+			int x = (int) (Math.random() * 9000 + 3000);
 			int y = (int) (Math.random() * 405 + 405);
-			if (y > 580) {
-				y = 570;
-			}
 			lixo2.add(new Lixo2(x, y));
 		}
 	}
 
 	public void inicializalixos3() {
-		int coordenadas[] = new int[35];
+		int coordenadas[] = new int[30];
 		lixo3 = new ArrayList<Lixo3>();
 
 		for (int l = 0; l < coordenadas.length; l++) {
-			int x = (int) (Math.random() * 10000 + 4500);
+			int x = (int) (Math.random() * 9000 + 3000);
 			int y = (int) (Math.random() * 405 + 405);
-			if (y > 580) {
-				y = 570;
-			}
 			lixo3.add(new Lixo3(x, y));
 
 		}
 	}
 
 	public void inicializalixos4() {
-		int coordenadas[] = new int[35];
+		int coordenadas[] = new int[30];
 		lixo4 = new ArrayList<Lixo4>();
 
 		for (int e = 0; e < coordenadas.length; e++) {
-			int x = (int) (Math.random() * 10000 + 4500);
+			int x = (int) (Math.random() * 9000 + 3000);
 			int y = (int) (Math.random() * 405 + 405);
-			if (y > 580) {
-				y = 570;
-			}
 			lixo4.add(new Lixo4(x, y));
 
 		}
 	}
 
 	public void inicializaobstaculo() {
-		int coordenadas[] = new int[15];
+		int coordenadas[] = new int[7];
 		obstaculo1 = new ArrayList<Obstaculo1>();
 
 		for (int e = 0; e < coordenadas.length; e++) {
-			int x = (int) (Math.random() * 10000 + 4500);
+			int x = (int) (Math.random() * 9000 + 3000);
 			int y = (int) (Math.random() * 400 + 405);
-			if (y > 580) {
-				y = 570;
-			}
 			obstaculo1.add(new Obstaculo1(x, y));
 
 		}
 	}
 
 	public void inicializaobstaculo2() {
-		int coordenadas[] = new int[15];
+		int coordenadas[] = new int[7];
 		obstaculo2 = new ArrayList<Obstaculo2>();
 
 		for (int e = 0; e < coordenadas.length; e++) {
-			int x = (int) (Math.random() * 10000 + 4500);
+			int x = (int) (Math.random() * 9000 + 3000);
 			int y = (int) (Math.random() * 400 + 405);
-			if (y > 580) {
-				y = 570;
-			}
 			obstaculo2.add(new Obstaculo2(x, y));
 
 		}
@@ -262,7 +242,7 @@ public class Fase extends JPanel implements ActionListener {
 		Graphics2D graficos = (Graphics2D) g;
 		if (emJogo == true) {
 			if (highScore == "")
-				highScore = ("Ninguém: 0");
+				highScore = ("Sem Highscore");
 			graficos.drawImage(fundoo, 0, 0, null);
 			for (int p = 0; p < fundo.size(); p++) {
 				Fundo q = fundo.get(p);
@@ -309,7 +289,7 @@ public class Fase extends JPanel implements ActionListener {
 
 				graficos.setFont(graficos.getFont().deriveFont(20.0f));
 				graficos.setColor(Color.white);
-				graficos.drawString("TIMER = " + segundos, 600, 50);
+				graficos.drawString("TEMPO = " + segundos, 600, 50);
 				graficos.drawString("PONTUAÇÃO = " + pontuacao, 800, 50);
 				graficos.drawString(highScore, 50, 50);
 
